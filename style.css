@@ -4,7 +4,7 @@
   --accent:#B57AA9;
   --accent-dark:#4E0054;
   --link: #6B2A6C;
-  --link-hover: #FFD3E7;
+  --link-hover: #B57AA9;
   
 }
 
@@ -134,6 +134,7 @@ transform: rotate(360deg);
     font-size: 20px;
     color:var(--accent-dark);
     left: 50%;
+    text-wrap: pretty;
 }
 
 .about-images {
@@ -272,9 +273,70 @@ transform: rotate(360deg);
     z-index: 3; 
     pointer-events: none;
 }
+
+/*officers section */
+#officers{
+    padding:45px;
+    background-color: var(--accent);
+    position: relative;
+     display:flex;
+    flex-direction:column;
+}
+
+#officers h1{
+    text-align: left;
+    font-size: 60px;
+    left: 20%;
+    color:var(--accent-dark);
+}
+
+#event-images{
+    position: relative;
+    padding-bottom: 100px;
+}
+#fishtop{
+  position: absolute;
+  width: 30vw;
+  max-width: none;
+  right: 0vw;
+  top: 8%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#fishbottom{
+  position: absolute;      
+  max-width: 30vw;
+  left: 0vw;
+  top: 80%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.polaroid{
+  width: auto;
+ max-width: 18vw;
+}
+.polaroid:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  rotate: 5deg;
+}
+.polaroid-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+
 /* Contact / footer */
 #contact{
-    background:var(--accent);
+    background:var(--lightpink );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,8 +354,7 @@ transform: rotate(360deg);
   justify-content: center;
   position: relative;
   gap:70px;
-  margin-top:20px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /* Make each link a vertical stack: icon above label, centered */
@@ -312,11 +373,14 @@ transform: rotate(360deg);
   text-decoration: underline;
 }
 
+
+
 #contact .icon{
-  width: 80px;
+  width: 50px;
   height: auto;
   margin: 0;
 }
+
 
 #contact img{
     vertical-align: middle;
@@ -344,12 +408,30 @@ transform: rotate(360deg);
   }
   #contact .container{
     font-size: 20px;
-    gap:10px;
+    gap:30px;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
   }
+
+  .polaroid-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    gap: 10px;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  #fishbottom{
+    width: 60vw;
+    top: 85%;
+  }
+.polaroid{
+    max-width: 18vw;
+
+}
   #yarn{
     width: 10vw;
     top:45%;
@@ -465,6 +547,7 @@ transform: rotate(360deg);
   header h1 { font-size: 22px; }
   nav a { font-size:16px; margin-left:6px; }
   #landing h1 { font-size: 40px; }
+  #landing p { font-size:19px; }
   #about h1, #events h1 { font-size: 32px; }
   #about p, #events p { font-size:16px; }
   #contact .icon{
@@ -479,6 +562,16 @@ transform: rotate(360deg);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .polaroid-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .polaroid{
+    max-width: 60vw;
   }
   #yarn{
     width: 15vw;
@@ -505,7 +598,7 @@ transform: rotate(360deg);
 /* Small phones: ensure footer stacks into a column */
 @media (max-width: 375px) {
   #contact .icon{
-    width: 50px;
+    width: 30px;
     height: auto;
     margin: 0;
   }
@@ -517,6 +610,28 @@ transform: rotate(360deg);
     flex-direction: column;
     align-items: flex-start;
   }
+
+  #fishtop{
+    width: 40vw;
+  }
+
+  #fishbottom{
+    width: 80vw;
+    top: 95%;
+  }
+
+  #officers h1{
+    font-size: 40px;
+  }
+
+  .polaroid-container{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .polaroid{
+    max-width: 60vw;
+  }
   #crane1, #crane2, #crane3{
     width: 10vw;
   }
@@ -525,6 +640,7 @@ transform: rotate(360deg);
   }
   #landing p{
     font-size: 20px;
+    padding:10px;
   }
   #yarnline {
     width: 90vw; 
